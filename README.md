@@ -28,20 +28,10 @@ BMO is built using the following technologies:
 
 To run BMO locally on your machine, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/bmo.git`
+1. Clone the repository: `git clone https://github.com/SteGarAla/BMO`
 2. Navigate to the project directory: `cd bmo`
 3. Start the application: `npm run dev`
 6. Access BMO in your browser at `http://localhost:3000`
-
-## Configuration
-
-Before running the application, you need to set up the following environment variables:
-
-- `CHATGPT_API_KEY`: Your API key for the ChatGPT API. You can obtain one by signing up on the ChatGPT website (https://www.chatgpt.com/).
-
-- `DATABASE_URL`: The URL or path to your SQLite database file.
-
-Make sure to create a `.env` file in the project root and set these variables accordingly.
 
 ## Contributing
 
