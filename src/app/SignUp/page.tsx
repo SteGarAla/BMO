@@ -1,16 +1,31 @@
 import Link from 'next/link';
-import { login } from '../userUtil';
+import { login,usernameAvailibility } from '../userUtil';
 
+export default async function Home() {
 
-export default function Home() {
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
       <div className="bg-white w-96 rounded-lg shadow-lg p-8">
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold text-center">LOGIN</h2>
+        <div className="mb-10">
+          <h2 className="text-2xl font-bold text-center">SIGN-UP</h2>
         </div>
-        <form action={login} className="flex flex-col gap-4">
+        <form action = {login} className="flex flex-col gap-4">
+          // username is not available
+          //username is available
+        <input
+        required
+          minLength={3} maxLength={15}
+            type='userName'
+            name="login"
+            //on change
+            className="border border-gray-300 rounded-md p-3"
+            placeholder="Username"
+          />
+
+
           <input
+          required
+          minLength={9} maxLength={30}
             type="email"
             name="login"
             className="border border-gray-300 rounded-md p-3"
@@ -30,7 +45,7 @@ export default function Home() {
           </button>
         </form>
         <div className="mt-4 text-center">
-          <p className="text-gray-500">Don't have an account? <Link href="/SignUp" className="text-blue-500">Sign up</Link></p>
+          <p className="text-gray-500">Have an account? <Link href="/Login" className="text-blue-500">Login</Link></p>
         </div>
       </div>
     </div>
